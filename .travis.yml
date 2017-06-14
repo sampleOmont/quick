@@ -20,7 +20,7 @@ env:
 
 # We don't want to run linux commands as super user
 #false means Travis will run this in a container
-sudo: true
+sudo: false
 
 # Disable x-debug to speed up things
 before_install: phpenv config-rm xdebug.ini
@@ -39,16 +39,13 @@ before_script:
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start
   - echo "Download selenium-server-standalone jar file"
-  - "wget http://selenium-release.storage.googleapis.com/3.0-beta3/selenium-server-standalone-3.0.0-beta3.jar -O selenium-server-standalone.jar && sudo mv selenium-server-standalone.jar /usr/local/bin"
-  - "wget http://chromedriver.storage.googleapis.com/2.23/chromedriver_linux64.zip -O chromedriver.zip && unzip chromedriver.zip && sudo mv chromedriver /usr/local/bin"
-  - "java  -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver  -jar /usr/local/bin/selenium-server-standalone.jar &"
-  - sleep 3
-  - sudo whereis google-chrome
-#  - echo "Run selenium server - background process"
- # - nohup bash -c "java -jar selenium-server-standalone.jar &" && sleep 1; cat nohup.out
+  - wget -c -nc --retry-connrefused --tries=0 http://goo.gl/EoH85x -O selenium-server-standalone.jar
+  - echo "Run selenium server - background process"
+  - nohup bash -c "java -jar selenium-server-standalone.jar &" && sleep 1; cat nohup.out
   - echo "Run php in-built server - background process"
   - nohup bash -c "php -S localhost:8000 2>&1 -t app &" && sleep 1; cat nohup.out
   - sleep 3
+  - vendor/bin/codecept build
 
 
 # Run main commands
