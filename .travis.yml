@@ -49,6 +49,7 @@ before_script:
   - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
   - sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
   - echo "Run selenium server - background process"
+  - "java  -Dwebdriver.chrome.driver=/usr//bin/chromedriver  -jar /usr/local/bin/selenium-server-standalone.jar &"
   - nohup bash -c "java -jar selenium-server-standalone.jar &" && sleep 1; cat nohup.out
   - echo "Run php in-built server - background process"
   - nohup bash -c "php -S localhost:8000 2>&1 -t app &" && sleep 1; cat nohup.out
