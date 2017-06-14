@@ -40,6 +40,14 @@ before_script:
   - sleep 3 # give xvfb some time to start
   - echo "Download selenium-server-standalone jar file"
   - wget -c -nc --retry-connrefused --tries=0 http://goo.gl/EoH85x -O selenium-server-standalone.jar
+  - sudo apt-get install unzip
+  - wget -N http://chromedriver.storage.googleapis.com/2.10/chromedriver_linux64.zip -P ~/Downloads
+  - unzip ~/Downloads/chromedriver_linux64.zip -d ~/Downloads
+  - chmod +x ~/Downloads/chromedriver
+  - sudo mv -f ~/Downloads/chromedriver /usr/local/share/chromedriver
+  - echo Change the directory to /usr/bin/chromedriver
+  - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+  - sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
   - echo "Run selenium server - background process"
   - nohup bash -c "java -jar selenium-server-standalone.jar &" && sleep 1; cat nohup.out
   - echo "Run php in-built server - background process"
