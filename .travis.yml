@@ -28,10 +28,10 @@ before_install: phpenv config-rm xdebug.ini
 # Install packages those will be required during build
 install:
   - composer install --no-interaction
-  - vendor/bin/codecept build
   - php artisan migrate --force
   - php artisan serve --port=8000 --host=localhost &
   - sleep 5
+
 
 # Prepare test environment
 before_script:
@@ -44,6 +44,10 @@ before_script:
   - nohup bash -c "java -jar selenium-server-standalone.jar &" && sleep 1; cat nohup.out
   - echo "Run php in-built server - background process"
   - nohup bash -c "php -S localhost:8000 2>&1 -t app &" && sleep 1; cat nohup.out
+  -  ./chromedriver.exe
+  - sleep3
+  - vendor/bin/codecept build
+
 
 # Run main commands
 script:
