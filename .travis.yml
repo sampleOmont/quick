@@ -20,13 +20,14 @@ env:
 
 # We don't want to run linux commands as super user
 #false means Travis will run this in a container
-sudo: false
+sudo: true
 
 # Disable x-debug to speed up things
 before_install: phpenv config-rm xdebug.ini
 
 # Install packages those will be required during build
 install:
+  - sudo apt-get install unzip
   - composer install --no-interaction
   - php artisan migrate --force
   - php artisan serve --port=8000 --host=localhost &
@@ -40,7 +41,6 @@ before_script:
   - sleep 3 # give xvfb some time to start
   - echo "Download selenium-server-standalone jar file"
   - wget -c -nc --retry-connrefused --tries=0 http://goo.gl/EoH85x -O selenium-server-standalone.jar
-  - sudo apt-get install unzip
   - wget -N http://chromedriver.storage.googleapis.com/2.10/chromedriver_linux64.zip -P ~/Downloads
   - unzip ~/Downloads/chromedriver_linux64.zip -d ~/Downloads
   - chmod +x ~/Downloads/chromedriver
