@@ -8,8 +8,7 @@ actor: AcceptanceTester
 modules:
     enabled:
         - WebDriver:
-             url: http://localhost
-             port: 8080
+             url: http://localhost:8080
              browser: chrome
 #        - Db:
 #                 dsn: 'mysql:host=localhost;dbname=mysql'
