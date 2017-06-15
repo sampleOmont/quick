@@ -62,13 +62,6 @@ before_script:
 
 # Run main commands
 script:
-  - mkdir bootstrap/cache
-  - mkdir storage
-  - mkdir storage/app
-  - mkdir storage/framework
-  - mkdir storage/framework/sessions
-  - mkdir storage/framework/cache
-  - mkdir storage/framework/views
   - chmod 777 -R storage
   - sudo /etc/init.d/apache2 start
   - sleep 3
@@ -79,7 +72,7 @@ script:
   - sleep 3
   - vendor/bin/codecept build
   - sleep 3
-  - vendor/bin/codecept run tests/acceptance --steps --debug
+  - vendor/bin/codecept run tests/acceptance --steps
 
 #after_script:
 
