@@ -55,7 +55,7 @@ install:
 before_script:
   - 'xvfb-run java -jar /usr/local/bin/selenium-server-standalone-3.0.1.jar -role hub &> /dev/null & '
   - sleep 3
-  - 'xvfb-run java -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -jar /usr/local/bin/selenium-server-standalone-3.0.1.jar -role node -hub http://localhost:4444/ &> /dev/null & '
+  - 'xvfb-run java -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -jar /usr/local/bin/selenium-server-standalone-3.0.1.jar &> /dev/null & '
   - sleep 3 # give xvfb some time to start
 #  - "export DISPLAY=:99.0"
 #  - "sh -e /etc/init.d/xvfb start"
