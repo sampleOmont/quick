@@ -1,15 +1,21 @@
-class_name: AcceptanceTester
+# Codeception Test Suite Configuration
+#
+# Suite for acceptance tests.
+# Perform tests in browser using the WebDriver or PhpBrowser.
+# If you need both WebDriver and PHPBrowser tests - create a separate suite.
 
+actor: AcceptanceTester
 modules:
-  enabled:
-    - \BrowserStackWebDriver
-  config:
-    \BrowserStackWebDriver:
-      host: 'hub-cloud.browserstack.com'
-      port: 80
-      browser: chrome
-      url: 'http://localhost:8080'
-      capabilities:
-        'browserstack.user': 'olmok1'
-        'browserstack.key' : '9yxyYxJnfFFTgmob7EYZ'
-        'browserstack.local': true
+    enabled:
+        - WebDriver:
+             url: http://localhost:8080
+             browser: chrome
+#        - Db:
+#                 dsn: 'mysql:host=localhost;dbname=mysql'
+#                 user: 'root'
+#                 password: ''
+#                 dump: 'tests/_data/mysql.sql'
+#                 populate: true
+#                 cleanup: true
+#                 reconnect: true
+        - \Helper\Acceptance

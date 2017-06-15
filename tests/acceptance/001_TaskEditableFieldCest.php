@@ -19,7 +19,6 @@ class TaskEditableFieldCest
     {
         $I->wantTo('Editable text field shown correct');
         $I->amOnPage('');
-        $I->waitForText('Apache');
         $I->waitForText('Task List', 10);
         $I->waitForElementVisible(['xpath'=>'//input[@type="text"]'], 10);
 
