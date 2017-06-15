@@ -10,6 +10,7 @@ modules:
          - \BrowserStackWebDriver
              url: http://localhost:8080
              browser: chrome
+         - \Helper\Acceptance
 #        - Db:
 #                 dsn: 'mysql:host=localhost;dbname=mysql'
 #                 user: 'root'
@@ -18,7 +19,6 @@ modules:
 #                 populate: true
 #                 cleanup: true
 #                 reconnect: true
-        - \Helper\Acceptance
     config:
         \BrowserStackWebDriver:
           host: 'hub-cloud.browserstack.com'
@@ -30,7 +30,7 @@ modules:
             'browserstack.key': 'hyerMoxznJfpjTSTxmFC'
             'browserstack.debug': true
             'build': 'codeception-browserstack'
-    env:
+env:
       local1:
         modules:
           config:
