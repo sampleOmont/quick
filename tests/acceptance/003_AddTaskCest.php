@@ -5,6 +5,7 @@ use Page\TasksPage;
 
 /**
  * Class AddTaskCest
+ * @group Smoke_2
  * @package Tests
  */
 class AddTaskCest

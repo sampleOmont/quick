@@ -5,6 +5,7 @@ use Page\TasksPage;
 
 /**
  * Class EmptyErrorMessageShownCest
+ * @group Smoke_1
  * @package Tests
  */
 class EmptyErrorMessageShownCest

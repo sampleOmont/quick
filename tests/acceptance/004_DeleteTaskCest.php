@@ -7,6 +7,7 @@ use Page\TasksPage;
 
 /**
  * Class DeleteTaskCest
+ * @group Smoke_2
  * @package Tests
  */
 class DeleteTaskCest

@@ -4,6 +4,7 @@ namespace Tests;
 
 /**
  * Class TaskEditableFieldCest
+ * @group Smoke_1
  * @package Tests
  */
 class TaskEditableFieldCest
