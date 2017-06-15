@@ -61,6 +61,14 @@ before_script:
 
 # Run main commands
 script:
+  - mkdir bootstrap/cache
+  - mkdir storage
+  - mkdir storage/app
+  - mkdir storage/framework
+  - mkdir storage/framework/sessions
+  - mkdir storage/framework/cache
+  - mkdir storage/framework/views
+  - chmod 777 -R storage
   - composer install --no-interaction
   - php artisan migrate --force
   - php artisan serve &
