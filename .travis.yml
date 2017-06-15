@@ -21,6 +21,7 @@ addons:
 # Disable x-debug to speed up things
 before_install: phpenv config-rm xdebug.ini
 
+
 # Install packages those will be required during build
 install:
 # Install dependencies.
@@ -54,6 +55,7 @@ install:
 
 # Prepare test environment
 before_script:
+  - cp .env.example .en
   - 'nohup  xvfb-run java -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -jar /usr/local/bin/selenium-server-standalone-3.0.1.jar &'
   - sleep 3 # give xvfb some time to start
   - "export DISPLAY=:99.0"
