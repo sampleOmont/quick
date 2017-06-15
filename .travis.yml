@@ -45,7 +45,7 @@ before_script:
   - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
   - sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
   - echo "Run selenium server - background process"
-  - "xvfb-run java -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -jar /usr/local/bin/selenium-server-standalone.jar -debug"
+  - "java -jar selenium-server-standalone-2.30.0.jar"
   - sleep 3
   - vendor/bin/codecept build
 
