@@ -34,4 +34,15 @@ class TasksPage
     {
         return ['xpath' => '//tbody/./tr/td/div[.="'.$name.'"]'];
     }
+
+    /**
+     * Delete element button
+     *
+     * @param string $name task name
+     * @return array
+     */
+    public function deleteItem($name)
+    {
+        return ['xpath' => '//tbody/./tr/td/div[.="'.$name.'"]/../..//button'];
+    }
 }
