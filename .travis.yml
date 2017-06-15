@@ -5,22 +5,18 @@ language: php
 os:
   - linux
 
-#addons
-
-# git configs
-git:
-  depth: 1
-
 # Define the php versions against we want to test our code
 php:
     - 5.6
 env:
 - DB_HOST=localhost DB_DATABASE=mysql DB_USERNAME=root DB_PASSWORD=''
 
-
-# We don't want to run linux commands as super user
-#false means Travis will run this in a container
-sudo: true
+dist: trusty
+sudo: required
+addons:
+  packages:
+    - unzip
+    - google-chrome-stable
 
 # Disable x-debug to speed up things
 before_install: phpenv config-rm xdebug.ini
@@ -49,10 +45,7 @@ before_script:
   - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
   - sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
   - echo "Run selenium server - background process"
-  - "java  -Dwebdriver.chrome.driver=/usr//bin/chromedriver  -jar /usr/local/bin/selenium-server-standalone.jar &"
-  - nohup bash -c "java -jar selenium-server-standalone.jar &" && sleep 1; cat nohup.out
-  - echo "Run php in-built server - background process"
-  - nohup bash -c "php -S localhost:8000 2>&1 -t app &" && sleep 1; cat nohup.out
+  - "xvfb-run java -Dwebdriver.chrome.driver=/usr/bin/chromedriver -jar /usr/local/bin/selenium-server-standalone.jar -debug"
   - sleep 3
   - vendor/bin/codecept build
 
