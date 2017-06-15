@@ -42,7 +42,7 @@ before_script:
   - chmod +x ~/Downloads/chromedriver
   - sudo mv -f ~/Downloads/chromedriver /usr/local/bin/chromedriver
   - echo Change the directory to /usr/local/bin/chromedriver
-  - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+#  - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
   - echo "Run selenium server - background process"
   - "xvfb-run java -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -jar /usr/local/bin/selenium-server-standalone.jar -debug"
   - sleep 3
