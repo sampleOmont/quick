@@ -55,7 +55,7 @@ install:
 
 # Prepare test environment
 before_script:
-  - cp .env.example .en
+  - cp .env.example .env
   - 'nohup  xvfb-run java -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -jar /usr/local/bin/selenium-server-standalone-3.0.1.jar &'
   - sleep 3 # give xvfb some time to start
   - "export DISPLAY=:99.0"
