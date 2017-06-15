@@ -62,17 +62,23 @@ before_script:
 
 # Run main commands
 script:
+  - mkdir bootstrap/cache
+  - mkdir storage
+  - mkdir storage/app
+  - mkdir storage/framework
+  - mkdir storage/framework/sessions
+  - mkdir storage/framework/cache
+  - mkdir storage/framework/views
   - chmod 777 -R storage
   - sudo /etc/init.d/apache2 start
   - sleep 3
   - composer install --no-interaction
   - php artisan migrate --force
-  - sleep 3
   - php artisan serve --port=8080 &
   - sleep 3
-  - vendor/bin/codecept build
+  - sudo /etc/init.d/mysql start
   - sleep 3
-  - vendor/bin/codecept run tests/acceptance --steps
+  - vendor/bin/codecept run tests/acceptance --steps --debug
 
 #after_script:
 
