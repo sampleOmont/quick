@@ -45,10 +45,10 @@ install:
 - sudo mv -f ~/selenium-server-standalone-3.0.1.jar /usr/local/share/
 - sudo chmod +x /usr/local/share/selenium-server-standalone-3.0.1.jar
 - sudo ln -s /usr/local/share/selenium-server-standalone-3.0.1.jar /usr/local/bin/selenium-server-standalone-3.0.1.jar
-  - composer install --no-interaction
-  - php artisan migrate --force
-  - php artisan serve --port=8000 --host=localhost &
-  - sleep 5
+- composer install --no-interaction
+- php artisan migrate --force
+- php artisan serve --port=8000 --host=localhost &
+- sleep 5
 
 
 # Prepare test environment
