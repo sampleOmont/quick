@@ -55,18 +55,16 @@ install:
 
 # Prepare test environment
 before_script:
-#  - 'xvfb-run java -jar /usr/local/bin/selenium-server-standalone-3.0.1.jar -role hub &> /dev/null & '
   - sleep 3
   - 'nohup  xvfb-run java -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -jar /usr/local/bin/selenium-server-standalone-3.0.1.jar &'
   - sleep 3 # give xvfb some time to start
-  - sleep 3
   - vendor/bin/codecept build
   - sleep 4
 
 
 # Run main commands
 script:
-  - vendor/bin/codecept run --steps --debug
+  - vendor/bin/codecept run tests/acceptance --steps --debug
 
 #after_script:
 
