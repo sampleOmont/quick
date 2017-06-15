@@ -8,7 +8,7 @@ namespace Page;
  */
 class ApiPage
 {
-    const URL = 'http://localhost:8000/task';
+    const URL = 'http://localhost:8080/task';
     /**
      *
      * @param \AcceptanceTester $I Codeception variable
@@ -26,7 +26,7 @@ class ApiPage
      */
     public function newTask($task)
     {
-        
+
         $I=$this->tester;
         $I->sendPOST(static::URL, ['name' => $task]);
     }
