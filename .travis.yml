@@ -75,6 +75,7 @@ script:
   - sudo /etc/init.d/apache2 start
   - sleep 3
   - composer install --no-interaction
+  - php artisan key:generate
   - php artisan migrate --force
   - php artisan serve --port=8080 &
   - sleep 3
