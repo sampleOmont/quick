@@ -54,9 +54,7 @@ install:
 before_script:
 #install Application depenencies
   - composer install --no-interaction
-  - php artisan migrate --force
-  - php artisan serve --port=8000 --host=127.0.0.1 &
-  - sleep 3
+
   - 'nohup  xvfb-run java -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -jar /usr/local/bin/selenium-server-standalone-3.0.1.jar &'
   - sleep 3 # give xvfb some time to start
   - vendor/bin/codecept build
@@ -68,6 +66,9 @@ before_script:
 
 # Run main commands
 script:
+  - php artisan migrate --force
+  - php artisan serve --port=8000 --host=localhost &
+  - sleep 3
   - vendor/bin/codecept run tests/acceptance --steps --debug
 
 #after_script:
