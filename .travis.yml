@@ -66,7 +66,7 @@ before_script:
 
 # Run main commands
 script:
-  - vendor/bin/codecept run tests/acceptance --steps -debug
+  - vendor/bin/codecept run --steps --debug
 
 #after_script:
 
