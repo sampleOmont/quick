@@ -69,6 +69,10 @@ script:
   - php artisan migrate --force
   - php artisan serve &
   - sleep 3
+  - sudo /etc/init.d/mysql start
+  - sleep 3
+  - sudo start apache2
+  - sleep 3
   - vendor/bin/codecept run tests/acceptance --steps --debug
 
 #after_script:
