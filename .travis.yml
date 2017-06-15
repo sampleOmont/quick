@@ -70,14 +70,13 @@ script:
   - mkdir storage/framework/cache
   - mkdir storage/framework/views
   - chmod 777 -R storage
-  - /etc/init.d/apache2 start
+  - sudo /etc/init.d/apache2 start
   - sleep 3
   - composer install --no-interaction
   - php artisan migrate --force
   - php artisan serve &
   - sleep 3
   - sudo /etc/init.d/mysql start
-  - sleep 3
   - sleep 3
   - vendor/bin/codecept build
   - sleep 3
