@@ -80,13 +80,13 @@ script:
   - sleep 3
   - sudo /etc/init.d/mysql start
   - sleep 3
-  - vendor/bin/codecept run tests/acceptance --steps --debug
+  - vendor/bin/codecept run tests/acceptance --steps --debug --env local1
 
 #after_script:
 
 #after_success:
 
-after_failure:
+#after_failure:
 
 
 # Tell Travis CI to monitor only 'master' branch

@@ -7,7 +7,7 @@
 actor: AcceptanceTester
 modules:
     enabled:
-        - WebDriver:
+         - \BrowserStackWebDriver
              url: http://localhost:8080
              browser: chrome
 #        - Db:
@@ -19,3 +19,24 @@ modules:
 #                 cleanup: true
 #                 reconnect: true
         - \Helper\Acceptance
+    config:
+        \BrowserStackWebDriver:
+          host: 'hub-cloud.browserstack.com'
+          port: 80
+          browser: chrome
+          url: 'http://localhost:8080'
+          capabilities:
+            'browserstack.user': 'oleksiikl1'
+            'browserstack.key': 'hyerMoxznJfpjTSTxmFC'
+            'browserstack.debug': true
+            'build': 'codeception-browserstack'
+    env:
+      local1:
+        modules:
+          config:
+            \BrowserStackWebDriver:
+              url: 'http://dev.eflow.efficio.digital/'
+              capabilities:
+                'browserstack.local': true
+                'browser': 'firefox'
+                'name': 'local_test'
