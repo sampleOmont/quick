@@ -73,7 +73,7 @@ script:
   - php artisan migrate --force
   - php artisan serve --port=8080 &
   - sleep 3
-  - mysqldump -u root -p mysql > mysql.sql
+  - mysqldump -u root mysql > mysql.sql
   - vendor/bin/codecept run tests/acceptance --steps
 
 #after_script:
