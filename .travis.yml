@@ -69,7 +69,7 @@ script:
   - mkdir storage/framework/sessions
   - mkdir storage/framework/cache
   - mkdir storage/framework/views
-  - chmod -R a+rX /home/travis/build/sampleOmont/quick
+  - chmod -R 755 /home/travis/build/sampleOmont
   - chmod 777 -R storage
   - sudo /etc/init.d/apache2 start
   - sleep 3
