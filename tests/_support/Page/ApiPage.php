@@ -26,6 +26,7 @@ class ApiPage
      */
     public function newTask($task)
     {
+        
         $I=$this->tester;
         $I->sendPOST(static::URL, ['name' => $task]);
     }
