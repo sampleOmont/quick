@@ -74,7 +74,7 @@ script:
   - sleep 3
   - composer install --no-interaction
   - php artisan migrate --force
-  - php artisan serve --host=127.0.1.1 --port=9999 &
+  - php artisan serve --port=8080 &
   - sleep 3
   - sudo /etc/init.d/mysql start
   - sleep 3
