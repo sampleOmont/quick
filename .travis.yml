@@ -49,16 +49,16 @@ install:
 - php artisan migrate --force
 - php artisan serve --port=8000 --host=localhost &
 - sleep 5
+- "export DISPLAY=:99.0"
+- "sh -e /etc/init.d/xvfb start"
 
 
 # Prepare test environment
 before_script:
   - 'xvfb-run java -jar /usr/local/bin/selenium-server-standalone-3.0.1.jar -role hub &> /dev/null & '
   - sleep 3
-  - 'xvfb-run java -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -jar /usr/local/bin/selenium-server-standalone-3.0.1.jar'
+  - 'xvfb-run java -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -jar /usr/local/bin/selenium-server-standalone-3.0.1.jar -role node'
   - sleep 3 # give xvfb some time to start
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
   - sleep 3
   - vendor/bin/codecept build
   - sleep 4
