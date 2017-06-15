@@ -9,7 +9,6 @@ modules:
     enabled:
         - WebDriver:
              url: http://localhost:8000/
-             browser: chrome
 #        - Db:
 #                 dsn: 'mysql:host=localhost;dbname=mysql'
 #                 user: 'root'
