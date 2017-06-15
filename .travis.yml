@@ -67,7 +67,7 @@ before_script:
 # Run main commands
 script:
   - php artisan migrate --force
-  - php artisan serve --port=8000 --host=localhost &
+  - php artisan serve --port=8000 &
   - sleep 3
   - vendor/bin/codecept run tests/acceptance --steps --debug
 
