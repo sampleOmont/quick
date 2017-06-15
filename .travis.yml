@@ -74,9 +74,8 @@ script:
   - sleep 3
   - composer install --no-interaction
   - php artisan migrate --force
-  - php artisan serve --port=8080
   - sleep 3
-  - sudo /etc/init.d/mysql start
+  - php artisan serve --port=8080 &
   - sleep 3
   - vendor/bin/codecept build
   - sleep 3
