@@ -10,6 +10,8 @@ php:
     - 5.6
 env:
 - DB_HOST=localhost DB_DATABASE=mysql DB_USERNAME=root DB_PASSWORD=''
+- TEST_SUITE=Smoke_1
+- TEST_SUITE=Smoke_2
 addons:
   artifacts: true
 dist: trusty
@@ -75,7 +77,7 @@ script:
   - php artisan serve --port=8080 &
   - sleep 3
   - mysqldump -u root mysql > /home/travis/build/sampleOmont/quick/tests/_data/mysql.sql
-  - vendor/bin/codecept run tests/acceptance --steps
+  - "vendor/bin/codecept run tests/acceptance --steps --group $TEST_SUITE"
 
 #after_script:
 
@@ -87,4 +89,3 @@ script:
 # Tell Travis CI to monitor only 'master' branch
 branches:
   only: master
-
