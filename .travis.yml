@@ -65,13 +65,6 @@ before_script:
 
 # Run main commands
 script:
-  - mkdir bootstrap/cache
-  - mkdir storage
-  - mkdir storage/app
-  - mkdir storage/framework
-  - mkdir storage/framework/sessions
-  - mkdir storage/framework/cache
-  - mkdir storage/framework/views
   - chmod -R 755 /home/travis/build/sampleOmont
   - chmod 777 -R storage
   - sudo /etc/init.d/apache2 start
@@ -81,9 +74,7 @@ script:
   - php artisan migrate --force
   - php artisan serve --port=8080 &
   - sleep 3
-  - sudo /etc/init.d/mysql start
-  - sleep 3
-  - vendor/bin/codecept run tests/acceptance --steps --debug --env local1
+  - vendor/bin/codecept run tests/acceptance --steps
 
 #after_script:
 
