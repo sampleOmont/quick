@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 14, 2017 at 12:57 PM
+-- Generation Time: Jun 15, 2017 at 08:17 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -2459,29 +2459,29 @@ INSERT INTO `innodb_index_stats` (`database_name`, `table_name`, `index_name`, `
 ('mysql', 'gtid_slave_pos', 'PRIMARY', '2015-11-06 15:13:16', 'n_diff_pfx02', 0, 1, 'domain_id,sub_id'),
 ('mysql', 'gtid_slave_pos', 'PRIMARY', '2015-11-06 15:13:16', 'n_leaf_pages', 1, NULL, 'Number of leaf pages in the index'),
 ('mysql', 'gtid_slave_pos', 'PRIMARY', '2015-11-06 15:13:16', 'size', 1, NULL, 'Number of pages in the index'),
-('mysql', 'migrations', 'GEN_CLUST_INDEX', '2017-06-14 10:19:09', 'n_diff_pfx01', 2, 1, 'DB_ROW_ID'),
-('mysql', 'migrations', 'GEN_CLUST_INDEX', '2017-06-14 10:19:09', 'n_leaf_pages', 1, NULL, 'Number of leaf pages in the index'),
-('mysql', 'migrations', 'GEN_CLUST_INDEX', '2017-06-14 10:19:09', 'size', 1, NULL, 'Number of pages in the index'),
-('mysql', 'password_resets', 'GEN_CLUST_INDEX', '2017-06-14 10:19:09', 'n_diff_pfx01', 0, 1, 'DB_ROW_ID'),
-('mysql', 'password_resets', 'GEN_CLUST_INDEX', '2017-06-14 10:19:09', 'n_leaf_pages', 1, NULL, 'Number of leaf pages in the index'),
-('mysql', 'password_resets', 'GEN_CLUST_INDEX', '2017-06-14 10:19:09', 'size', 1, NULL, 'Number of pages in the index'),
-('mysql', 'password_resets', 'password_resets_email_index', '2017-06-14 10:19:09', 'n_diff_pfx01', 0, 1, 'email'),
-('mysql', 'password_resets', 'password_resets_email_index', '2017-06-14 10:19:09', 'n_diff_pfx02', 0, 1, 'email,DB_ROW_ID'),
-('mysql', 'password_resets', 'password_resets_email_index', '2017-06-14 10:19:09', 'n_leaf_pages', 1, NULL, 'Number of leaf pages in the index'),
-('mysql', 'password_resets', 'password_resets_email_index', '2017-06-14 10:19:09', 'size', 1, NULL, 'Number of pages in the index'),
-('mysql', 'password_resets', 'password_resets_token_index', '2017-06-14 10:19:09', 'n_diff_pfx01', 0, 1, 'token'),
-('mysql', 'password_resets', 'password_resets_token_index', '2017-06-14 10:19:09', 'n_diff_pfx02', 0, 1, 'token,DB_ROW_ID'),
-('mysql', 'password_resets', 'password_resets_token_index', '2017-06-14 10:19:09', 'n_leaf_pages', 1, NULL, 'Number of leaf pages in the index'),
-('mysql', 'password_resets', 'password_resets_token_index', '2017-06-14 10:19:09', 'size', 1, NULL, 'Number of pages in the index'),
-('mysql', 'tasks', 'PRIMARY', '2017-06-14 10:56:35', 'n_diff_pfx01', 0, 1, 'id'),
-('mysql', 'tasks', 'PRIMARY', '2017-06-14 10:56:35', 'n_leaf_pages', 1, NULL, 'Number of leaf pages in the index'),
-('mysql', 'tasks', 'PRIMARY', '2017-06-14 10:56:35', 'size', 1, NULL, 'Number of pages in the index'),
-('mysql', 'users', 'PRIMARY', '2017-06-14 10:19:09', 'n_diff_pfx01', 0, 1, 'id'),
-('mysql', 'users', 'PRIMARY', '2017-06-14 10:19:09', 'n_leaf_pages', 1, NULL, 'Number of leaf pages in the index'),
-('mysql', 'users', 'PRIMARY', '2017-06-14 10:19:09', 'size', 1, NULL, 'Number of pages in the index'),
-('mysql', 'users', 'users_email_unique', '2017-06-14 10:19:09', 'n_diff_pfx01', 0, 1, 'email'),
-('mysql', 'users', 'users_email_unique', '2017-06-14 10:19:09', 'n_leaf_pages', 1, NULL, 'Number of leaf pages in the index'),
-('mysql', 'users', 'users_email_unique', '2017-06-14 10:19:09', 'size', 1, NULL, 'Number of pages in the index'),
+('mysql', 'migrations', 'GEN_CLUST_INDEX', '2017-06-14 11:41:02', 'n_diff_pfx01', 2, 1, 'DB_ROW_ID'),
+('mysql', 'migrations', 'GEN_CLUST_INDEX', '2017-06-14 11:41:02', 'n_leaf_pages', 1, NULL, 'Number of leaf pages in the index'),
+('mysql', 'migrations', 'GEN_CLUST_INDEX', '2017-06-14 11:41:02', 'size', 1, NULL, 'Number of pages in the index'),
+('mysql', 'password_resets', 'GEN_CLUST_INDEX', '2017-06-14 11:41:02', 'n_diff_pfx01', 0, 1, 'DB_ROW_ID'),
+('mysql', 'password_resets', 'GEN_CLUST_INDEX', '2017-06-14 11:41:02', 'n_leaf_pages', 1, NULL, 'Number of leaf pages in the index'),
+('mysql', 'password_resets', 'GEN_CLUST_INDEX', '2017-06-14 11:41:02', 'size', 1, NULL, 'Number of pages in the index'),
+('mysql', 'password_resets', 'password_resets_email_index', '2017-06-14 11:41:02', 'n_diff_pfx01', 0, 1, 'email'),
+('mysql', 'password_resets', 'password_resets_email_index', '2017-06-14 11:41:02', 'n_diff_pfx02', 0, 1, 'email,DB_ROW_ID'),
+('mysql', 'password_resets', 'password_resets_email_index', '2017-06-14 11:41:02', 'n_leaf_pages', 1, NULL, 'Number of leaf pages in the index'),
+('mysql', 'password_resets', 'password_resets_email_index', '2017-06-14 11:41:02', 'size', 1, NULL, 'Number of pages in the index'),
+('mysql', 'password_resets', 'password_resets_token_index', '2017-06-14 11:41:02', 'n_diff_pfx01', 0, 1, 'token'),
+('mysql', 'password_resets', 'password_resets_token_index', '2017-06-14 11:41:02', 'n_diff_pfx02', 0, 1, 'token,DB_ROW_ID'),
+('mysql', 'password_resets', 'password_resets_token_index', '2017-06-14 11:41:02', 'n_leaf_pages', 1, NULL, 'Number of leaf pages in the index'),
+('mysql', 'password_resets', 'password_resets_token_index', '2017-06-14 11:41:02', 'size', 1, NULL, 'Number of pages in the index'),
+('mysql', 'tasks', 'PRIMARY', '2017-06-15 18:17:12', 'n_diff_pfx01', 0, 1, 'id'),
+('mysql', 'tasks', 'PRIMARY', '2017-06-15 18:17:12', 'n_leaf_pages', 1, NULL, 'Number of leaf pages in the index'),
+('mysql', 'tasks', 'PRIMARY', '2017-06-15 18:17:12', 'size', 1, NULL, 'Number of pages in the index'),
+('mysql', 'users', 'PRIMARY', '2017-06-14 11:41:02', 'n_diff_pfx01', 0, 1, 'id'),
+('mysql', 'users', 'PRIMARY', '2017-06-14 11:41:02', 'n_leaf_pages', 1, NULL, 'Number of leaf pages in the index'),
+('mysql', 'users', 'PRIMARY', '2017-06-14 11:41:02', 'size', 1, NULL, 'Number of pages in the index'),
+('mysql', 'users', 'users_email_unique', '2017-06-14 11:41:02', 'n_diff_pfx01', 0, 1, 'email'),
+('mysql', 'users', 'users_email_unique', '2017-06-14 11:41:02', 'n_leaf_pages', 1, NULL, 'Number of leaf pages in the index'),
+('mysql', 'users', 'users_email_unique', '2017-06-14 11:41:02', 'size', 1, NULL, 'Number of pages in the index'),
 ('phpmyadmin', 'pma__bookmark', 'PRIMARY', '2015-11-10 15:25:30', 'n_diff_pfx01', 0, 1, 'id'),
 ('phpmyadmin', 'pma__bookmark', 'PRIMARY', '2015-11-10 15:25:30', 'n_leaf_pages', 1, NULL, 'Number of leaf pages in the index'),
 ('phpmyadmin', 'pma__bookmark', 'PRIMARY', '2015-11-10 15:25:30', 'size', 1, NULL, 'Number of pages in the index'),
@@ -2611,10 +2611,10 @@ CREATE TABLE `innodb_table_stats` (
 
 INSERT INTO `innodb_table_stats` (`database_name`, `table_name`, `last_update`, `n_rows`, `clustered_index_size`, `sum_of_other_index_sizes`) VALUES
 ('mysql', 'gtid_slave_pos', '2015-11-06 15:13:16', 0, 1, 0),
-('mysql', 'migrations', '2017-06-14 10:19:09', 2, 1, 0),
-('mysql', 'password_resets', '2017-06-14 10:19:09', 0, 1, 0),
-('mysql', 'tasks', '2017-06-14 10:56:35', 0, 1, 0),
-('mysql', 'users', '2017-06-14 10:19:09', 0, 1, 0),
+('mysql', 'migrations', '2017-06-14 11:41:02', 2, 1, 0),
+('mysql', 'password_resets', '2017-06-14 11:41:02', 0, 1, 0),
+('mysql', 'tasks', '2017-06-15 18:17:12', 0, 1, 0),
+('mysql', 'users', '2017-06-14 11:41:02', 0, 1, 0),
 ('phpmyadmin', 'pma__bookmark', '2015-11-10 15:25:30', 0, 1, 0),
 ('phpmyadmin', 'pma__central_columns', '2015-11-10 15:25:30', 0, 1, 0),
 ('phpmyadmin', 'pma__column_info', '2015-11-10 15:25:30', 0, 1, 1),
@@ -3303,7 +3303,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `tasks`
 --
 ALTER TABLE `tasks`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `time_zone`
 --
