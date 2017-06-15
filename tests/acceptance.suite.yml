@@ -8,8 +8,6 @@ actor: AcceptanceTester
 modules:
     enabled:
          - \BrowserStackWebDriver
-             url: http://localhost:8080
-             browser: chrome
          - \Helper\Acceptance
 #        - Db:
 #                 dsn: 'mysql:host=localhost;dbname=mysql'
