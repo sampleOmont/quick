@@ -10,7 +10,8 @@ php:
     - 5.6
 env:
 - DB_HOST=localhost DB_DATABASE=mysql DB_USERNAME=root DB_PASSWORD=''
-
+addons:
+  artifacts: true
 dist: trusty
 sudo: required
 addons:
@@ -85,7 +86,7 @@ script:
 
 #after_success:
 
-#after_failure:
+after_failure:
 
 
 # Tell Travis CI to monitor only 'master' branch
