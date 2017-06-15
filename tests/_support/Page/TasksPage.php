@@ -8,7 +8,6 @@ namespace Page;
  */
 class TasksPage
 {
-
     const TASK_EDITABLE = ['id' => 'task-name'];
     const ADD_TASK_BUTTON = ['xpath' => "//button[@type='submit']"];
     const ERROR_MESSAGE_TITLE = 'Whoops! Something went wrong!';

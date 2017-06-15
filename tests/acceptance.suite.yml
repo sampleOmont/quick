@@ -7,6 +7,9 @@
 actor: AcceptanceTester
 modules:
     enabled:
+        - REST:
+             depends: PhpBrowser
+             url: 'http://localhost:8080'
         - WebDriver:
              url: http://localhost:8080
              browser: chrome

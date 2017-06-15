@@ -1,6 +1,8 @@
 <?php
 
 namespace Tests;
+
+use Page\ApiPage;
 use Page\TasksPage;
 
 /**
@@ -10,6 +12,17 @@ use Page\TasksPage;
 class DeleteTaskCest
 {
     const TEST_TASK = 'Add new task message';
+
+    /**
+     * Function for creating one task using API
+     *
+     * @param ApiPage $page used as page object model for api calls
+     * @return void
+     */
+    public function _before(ApiPage $page)
+    {
+        $page->newTask(static::TEST_TASK);
+    }
 
     /**
      * Function for Deleting task
@@ -22,7 +35,7 @@ class DeleteTaskCest
     {
         $I->wantTo('Delete Task');
         $I->amOnPage('');
-        $I->waitForElementVisible(['xpath'=>'//input[@type="text"]'], 10);
+        $I->waitForElementVisible(['xpath' => '//input[@type="text"]'], 10);
         $I->waitForElementVisible($page->taskElement(static::TEST_TASK));
         $I->seeElement($page->taskElement(static::TEST_TASK));
         $I->waitForElementVisible($page->deleteItem(static::TEST_TASK));
